@@ -14,6 +14,7 @@ jobs:
 
     second_job:
         runs-on: linuxvm1g13
+        needs: first_job
         steps:
             - name: Welcome message
               run: echo "My first Github Actions Job"
