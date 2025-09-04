@@ -1,8 +1,11 @@
 name: Variable workflow
 on: push
-
+env:
+    workflowVar1: workflowvalue1
 jobs:
   job1:
+    env:
+        jobVar1: jpbvariable1
     runs-on: ubuntu-latest
     steps:
       - name: step1
@@ -10,3 +13,5 @@ jobs:
           stepVar1: stepvalue1
         run: |
           echo "The value for stepvar1: $stepVar1"
+          echo "The value for jobvar1: $jobVar1"
+          echo "The value for workflowVar2: $workflowVar1"
