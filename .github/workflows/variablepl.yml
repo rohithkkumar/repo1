@@ -1,7 +1,15 @@
 name: Variable workflow
-on: push
+on:
+    workflow_dispatch:
+        inputs:
+            loglevel:
+                description: "Log level"
+                required: true
+                default: "warning"
+
 env:
     workflowVar1: workflowvalue1
+
 jobs:
   job1:
     env:
