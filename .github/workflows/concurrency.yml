@@ -13,9 +13,7 @@ jobs:
     Job2:
         runs-on: ubuntu-latest
         needs: Job1
-        concurrency:
-            group: production-deployment
-            cancel-in-progress: false
+        timeout-minutes: 1
         steps:
             - name: echo 1
               run: |
