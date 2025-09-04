@@ -1,0 +1,19 @@
+name: Concurrency
+on: push
+
+jobs:
+    Job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo 1
+              run: echo "First echo"
+            - name : echo 2
+              run: echo "Second echo"
+
+    Job2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo 1
+              run: |
+                echo "Job2 First echo"
+                sleep 600s
