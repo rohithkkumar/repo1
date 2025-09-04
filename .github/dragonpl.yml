@@ -1,0 +1,17 @@
+name: I'm a dragon
+on: push
+
+jobs:
+    ascii_job:
+        runs-on: linuxvm1g13
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v4
+
+            - name: List current files
+              run: ls -ltra
+
+            - name: Run ASCII Art Script
+              run: |
+                chmod +x ascii-script.sh
+                ./ascii-script.sh
