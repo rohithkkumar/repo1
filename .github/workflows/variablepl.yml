@@ -15,4 +15,4 @@ jobs:
           echo "The value for stepvar1: $stepVar1"
           echo "The value for jobvar1: $jobVar1"
           echo "The value for workflowvar1: $workflowVar1"
-          echo "The value for repovar1: $REPOVAR1"
+          echo "The value for repovar1: ${{ vars.REPOVAR1}}"
