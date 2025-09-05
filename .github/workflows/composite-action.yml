@@ -4,10 +4,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
       - name: Use my composite action
-        uses: ./.github/actions/my-composite-action
+        uses: rohithkkumar/repo1/.github/actions/my-composite-action
         with:
           node-version: '18'
       - name: Display result
