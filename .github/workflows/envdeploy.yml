@@ -47,4 +47,4 @@ jobs:
       - name: Deploy to ${{ inputs.environment }}
         run: |
             echo "Deploying to ${{ inputs.environment }}"
-            echo "Var is ${{ vars.test }}"
+            echo "Var is ${{ vars.TEST }}"
