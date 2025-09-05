@@ -1,4 +1,4 @@
-name: context
+name: outputs
 on: push
 
 jobs:
@@ -6,12 +6,12 @@ jobs:
         runs-on: ubuntu-latest
         outputs:
             output1: ${{ steps.step1.outputs.test }}
-            output2: ${{ steps.step2.outputs.test }}
+            output2: ${{ steps.step2.outputs.test1 }}
         steps:
             - id: step1
               run: echo "test=hello" >> $GITHUB_OUTPUT
             - id: step2
-              run: echo "test=hello" >> $GITHUB_OUTPUT
+              run: echo "test1=hello" >> $GITHUB_OUTPUT
 
     job2:
         runs-on: ubuntu-latest
